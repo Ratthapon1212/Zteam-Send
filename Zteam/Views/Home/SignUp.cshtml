@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@model Customer
+
+
+
+<div class="container">
+    <div class="text-center">
+        <div class="display-4">Zteam</div>
+
+        <form asp-controller="Home" asp-action="SignUp" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row justify-content-center m-3">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="CusName"></label>
+                        <input asp-for="CusName" class="form-control" />
+                        <span asp-validation-for="CusName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center m-3">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="CusPass"></label>
+                        <input asp-for="CusPass" class="form-control" />
+                        <span asp-validation-for="CusPass" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center m-3">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="CusEmail"></label>
+                        <input asp-for="CusEmail" class="form-control" />
+                        <span asp-validation-for="CusEmail" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center m-3">
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary">ลงทะเบียน</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
